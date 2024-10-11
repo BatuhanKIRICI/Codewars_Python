@@ -1,16 +1,23 @@
-def narcissistic(value):
-    value_str = str(value)
+def duplicate_count(text):
+    # Your code goes here
+    text_list = list(text.lower())
 
-    splitted_value = list(value_str)
-    total = 0
+    set_1 = []
+    set_2 = []
 
-    for x in splitted_value:
-        x = int(x)
-        total += x ** (len(splitted_value))
-    if total == value:
-        return True
+    for x in text_list:
+        if x not in set_1:
+            count = text_list.count(x)
+            if count > 1:
+                set_1.append(x)
+    for y in text_list:
+        count = text_list.count(y)
+        if text_list.count(y) > 1:
+            set_2.append(y)
+    if len(set_1) == 0:
+        print(f"{len(set_1)} # no characters repeats more than once")
     else:
-        return False
+        print(f"{len(set_1)} ")
 
 
-print(narcissistic(153))
+duplicate_count("infinity")
