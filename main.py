@@ -1,13 +1,16 @@
-n = int(input())
+def is_leap(year):
+    leap = False
 
-emp_list = []
+    if year % 4 == 0 and year % 100 == 0 and year % 400 != 0:
+        leap = False
+    elif year % 4 == 0 and year % 400 == 0:
+        leap = True
+    elif year % 4 == 0:
+        leap = True
 
-for _ in range(0, n):
-    if n > 0:
-        n -= 1
-        emp_list.append(n)
+    return leap
 
-emp_list.reverse()
 
-for x in emp_list:
-    print(x * x)
+year = int(input())
+
+print(is_leap(year))
