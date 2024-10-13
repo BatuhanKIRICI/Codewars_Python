@@ -1,16 +1,17 @@
-def is_leap(year):
-    leap = False
+n = int(input())
 
-    if year % 4 == 0 and year % 100 == 0 and year % 400 != 0:
-        leap = False
-    elif year % 4 == 0 and year % 400 == 0:
-        leap = True
-    elif year % 4 == 0:
-        leap = True
+result = ""
 
-    return leap
+li = []
+
+for x in range(1, (n + 1)):
+
+    li.append(x)
+    n -= 1
+
+numbers = [str(item) for item in li if isinstance(item, (int))]
+
+result = str("".join(numbers))
 
 
-year = int(input())
-
-print(is_leap(year))
+print(result)
