@@ -1,17 +1,25 @@
+x = int(input())
+y = int(input())
+z = int(input())
 n = int(input())
 
-result = ""
+result = []
 
-li = []
+# for i in range(x + 1):
+#     for j in range(y + 1):
+#         for k in range(z + 1):
 
-for x in range(1, (n + 1)):
+#             if (i + j + k) != n:
+#                 result.append([i, j, k])
 
-    li.append(x)
-    n -= 1
+# print(result)
 
-numbers = [str(item) for item in li if isinstance(item, (int))]
-
-result = str("".join(numbers))
-
-
-print(result)
+print(
+    [
+        [i, j, k]
+        for i in range(x + 1)
+        for j in range(y + 1)
+        for k in range(z + 1)
+        if i + j + k != n
+    ]
+)
