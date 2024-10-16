@@ -1,25 +1,12 @@
-x = int(input())
-y = int(input())
-z = int(input())
-n = int(input())
+i = 4
+d = 4.0
+s = "HackerRank "
+# ------------------------------------------
+a = int(5.0)
+b = float(5.2)
+c = "Hello!"
 
-result = []
 
-# for i in range(x + 1):
-#     for j in range(y + 1):
-#         for k in range(z + 1):
-
-#             if (i + j + k) != n:
-#                 result.append([i, j, k])
-
-# print(result)
-
-print(
-    [
-        [i, j, k]
-        for i in range(x + 1)
-        for j in range(y + 1)
-        for k in range(z + 1)
-        if i + j + k != n
-    ]
-)
+print(i + a)
+print(d + b)
+print(s + c)
