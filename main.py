@@ -1,15 +1,27 @@
+# import math
+# import os
+# import random
+# import re
+# import sys
+
+total = 0
+
+
+def solve(meal_cost, tip_percent, tax_percent):
+
+    total = (
+        meal_cost + (meal_cost * tip_percent / 100) + (meal_cost * tax_percent / 100)
+    )
+    total = round(total)
+
+    print(total)
+
+
 if __name__ == "__main__":
-    n = int(input())
-    arr = list(map(int, input().split()))
+    meal_cost = float(input().strip())
 
-    def runner_up(item):
-        unique_arr = list(set(sorted((item), reverse=True)))
+    tip_percent = int(input().strip())
 
-        if len(unique_arr) < 2:
-            return None
+    tax_percent = int(input().strip())
 
-        unique_arr.sort(reverse=True)
-
-        return unique_arr[1]
-
-    print(runner_up(arr))
+    solve(meal_cost, tip_percent, tax_percent)
