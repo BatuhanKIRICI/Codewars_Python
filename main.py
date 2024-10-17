@@ -1,27 +1,29 @@
-# import math
-# import os
-# import random
-# import re
-# import sys
-
-total = 0
-
-
-def solve(meal_cost, tip_percent, tax_percent):
-
-    total = (
-        meal_cost + (meal_cost * tip_percent / 100) + (meal_cost * tax_percent / 100)
-    )
-    total = round(total)
-
-    print(total)
-
-
 if __name__ == "__main__":
-    meal_cost = float(input().strip())
 
-    tip_percent = int(input().strip())
+    list_1 = []
+    list_2 = []
+    list_3 = []
 
-    tax_percent = int(input().strip())
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
 
-    solve(meal_cost, tip_percent, tax_percent)
+        list_1.append([name, score])
+
+    # print(list_1)
+
+    for item in list_1:
+        list_2.append(item[1])
+
+    list_2 = sorted(set(list_2))
+
+    # print(list_2)
+
+    for item in list_1:
+        if item[1] == list_2[1]:
+            list_3.append(item[0])
+
+    list_3 = sorted(set(list_3))
+
+    for item in list_3:
+        print(item)
