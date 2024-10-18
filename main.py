@@ -1,29 +1,14 @@
 if __name__ == "__main__":
 
-    list_1 = []
-    list_2 = []
-    list_3 = []
+    n = int(input())
 
-    for _ in range(int(input())):
-        name = input()
-        score = float(input())
+    if n % 2 == 0:
 
-        list_1.append([name, score])
-
-    # print(list_1)
-
-    for item in list_1:
-        list_2.append(item[1])
-
-    list_2 = sorted(set(list_2))
-
-    # print(list_2)
-
-    for item in list_1:
-        if item[1] == list_2[1]:
-            list_3.append(item[0])
-
-    list_3 = sorted(set(list_3))
-
-    for item in list_3:
-        print(item)
+        if n <= 5 and n >= 2:
+            print("Not Weird")
+        elif n >= 6 and n <= 20:
+            print("Weird")
+        elif n > 20:
+            print("Not Weird")
+    else:
+        print("Weird")
